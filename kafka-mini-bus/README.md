@@ -1,10 +1,18 @@
 # Kafka Event Pipeline (fast testing and fast training) 🎯
 
-![CI/CD](https://img.shields.io/badge/CI%2FCD-CodePipeline%2FCodeBuild-blue)
-![Deploy](https://img.shields.io/badge/Deploy-CodeDeploy%20Blue%2FGreen-brightgreen)
-![IaC](https://img.shields.io/badge/IaC-Terraform-623CE4)
-![Runtime](https://img.shields.io/badge/ECS-Fargate-orange)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+[![CI/CD](https://img.shields.io/badge/CI%2FCD-CodePipeline%2FCodeBuild-blue)](https://docs.aws.amazon.com/codepipeline/)
+[![Deploy](https://img.shields.io/badge/Deploy-CodeDeploy%20Blue%2FGreen-brightgreen)](https://docs.aws.amazon.com/codedeploy/)
+[![IaC](https://img.shields.io/badge/IaC-Terraform-623CE4)](https://developer.hashicorp.com/terraform)
+[![Runtime](https://img.shields.io/badge/ECS-Fargate-orange)](https://docs.aws.amazon.com/AmazonECS/latest/userguide/what-is-fargate.html)
+[![Python](https://img.shields.io/badge/Python-3.11-blue)](https://www.python.org/)
+[![Docker](https://img.shields.io/badge/Container-Docker-blue)](https://www.docker.com/)
+[![Compose](https://img.shields.io/badge/Orchestration-Docker%20Compose-2496ED)](https://docs.docker.com/compose/)
+[![Bash](https://img.shields.io/badge/Scripts-Bash-4EAA25)](https://www.gnu.org/software/bash/)
+[![License](https://img.shields.io/badge/License-MIT-lightgrey)](https://opensource.org/licenses/MIT)
+
+
+
+
 
 🚀 Kafka Mini Bus
 
