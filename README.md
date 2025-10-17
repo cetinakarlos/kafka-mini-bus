@@ -1,11 +1,3 @@
-# Kafka Event Pipeline (fast testing and fast training) 🎯
-
-![CI/CD](https://img.shields.io/badge/CI%2FCD-CodePipeline%2FCodeBuild-blue)
-![Deploy](https://img.shields.io/badge/Deploy-CodeDeploy%20Blue%2FGreen-brightgreen)
-![IaC](https://img.shields.io/badge/IaC-Terraform-623CE4)
-![Runtime](https://img.shields.io/badge/ECS-Fargate-orange)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
-
 🚀 Kafka Mini Bus
 
 A lightweight data bus playground for DevOps & Cloud Engineers
