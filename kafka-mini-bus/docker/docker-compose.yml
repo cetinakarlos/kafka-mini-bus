@@ -1,0 +1,34 @@
+services:
+  kafka:
+    image: apache/kafka:3.7.0
+    container_name: kafka
+    ports:
+      - "9092:9092"                # host -> broker (PLAINTEXT)
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+      - ./config/server.properties:/opt/kafka/config/kraft/server.properties:ro
+    environment:
+      KAFKA_CLUSTER_ID: "kp-mini-bus-cluster-id-0001"
+      PATH: "/opt/kafka/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    command: >
+      bash -lc '
+      if [ ! -f /var/lib/kafka/data/meta.properties ]; then
+        CID="${KAFKA_CLUSTER_ID:-$$(/opt/kafka/bin/kafka-storage.sh random-uuid)}";
+        /opt/kafka/bin/kafka-storage.sh format -t $$CID -c /opt/kafka/config/kraft/server.properties;
+      fi;
+      exec /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/kraft/server.properties
+      '
+
+  ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui
+    depends_on: [kafka]
+    ports:
+      - "8080:8080"
+    environment:
+      - KAFKA_CLUSTERS_0_NAME=local
+      # 👉 ahora sí el listener interno existe
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:29092
+
+volumes:
+  kafka_data:
